@@ -20,7 +20,7 @@ public class CalculatorTest extends TestCase {
     protected double checkInput3;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp()  {
         c = new Calculator();
         input1 = "-15*(7-mod10(58)+sqrt(12*98+(9+5*6)))/5+(12.2-(9+8*(7+8/4)))";
         input2 = "2+2*2+";
@@ -28,7 +28,6 @@ public class CalculatorTest extends TestCase {
         input4 = "2*7*(7+9";
         input5 = "2*7*(7+9+UIO)";
         checkInput1 = -15 * (7 - (58 % 10) + pow((12 * 98 + (9 + 5 * 6)), 0.5)) / 5 + (12.2 - (9 + 8 * (7 + 8 / 4)));
-        ;
         checkInput3 = 2 * (2 + 9 / 9);
     }
 
