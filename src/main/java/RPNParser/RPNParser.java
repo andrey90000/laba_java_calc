@@ -44,11 +44,12 @@ public class RPNParser {
      * @param check - inputting string
      * @return -2 - If it gets unexpected expression
      * -1 - If it gets WHITESPACE
-     * 0 - If it gets predefined math function or number
-     * 1 - If it gets back bracket
+     * 0 - If it gets number
+     * 1 - If it gets predefined math function
      * 2 - If it gets bracket
-     * 3 - If it gets operators such as addition and subtraction
-     * 4 - If it gets operators such as multiplication and division
+     * 3 - If it gets back bracket
+     * 4 - If it gets operators such as addition and subtraction
+     * 5 - If it gets operators such as multiplication and division
      */
     protected int OperationPriority(String check) {
         if (check.equals("*") || check.equals("/")) return 5;
